@@ -1,0 +1,48 @@
+<div class="bbt">
+    <button class="btn btn-lg btn-white" [class.active]="filterBy===null" (click)="filterBy=null">All</button>
+    <button class="btn btn-lg btn-white" [class.active]="filterBy===true" (click)="filterBy=true">Open</button>
+    <button class="btn btn-lg btn-white" [class.active]="filterBy===false" (click)="filterBy=false">Closed</button>
+</div>
+<div id="tn">
+    <table id="table1" style="width: 100%;" >
+        <!-- <tr>
+             <th>Day</th>
+            <th>Time</th>
+            <th>Address</th>
+             <th>Provider Purpose</th> 
+            <th>Status</th> 
+        </tr> -->
+        <tr *ngFor="let patientt of (PATIENTS$ | patientFilter: filterBy)" class ="patient" >
+                <a routerLink="/detail/{{patientt.id}}">
+                <td width="50px;" >{{patientt.userId}}</td>
+                <td width="50px;" >{{patientt.id}}</td>
+                <td width="800px;" ><img src="assets/img/house.png" width="50" height="50"> {{patientt.title}}</td>
+                <!-- <td>{{patientt.provider}} , {{patientt.purpose}} </td> -->
+                <td width="50px;" >{{patientt.completed}}</td>
+                </a>
+                <td *ngIf="checkTF(patientt); else notShow"> 
+                    <button class="outcome" (click)="changOption(patientt)">OutCome</button>
+                </td>
+                
+                <ng-template #notShow>
+                    <td >
+                        <p> OutCome:
+                            <select name = "OPP"  [(ngModel)] = "patientt.completed" (change)="changOption1($event,patientt)">
+                                    <option value=true >Open</option>
+                                    <option value=false  selected >Closed</option>
+                                    <!-- <option value="Cancellced">Cancellced</option>
+                                    <option value="Did not Attend">Did not Attend</option> -->
+                            </select>
+                        </p>                        
+                    </td>
+                    <!-- <td *ngIf="checkOption(OPP,patientt)"> 
+                    <button >Open</button>
+                    </td> -->
+                </ng-template>
+            
+        </tr>
+    </table>
+</div>
+<div >
+
+</div>

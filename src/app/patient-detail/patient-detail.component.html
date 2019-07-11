@@ -1,0 +1,10 @@
+<div *ngIf="patientt">
+        <h2>{{patientt.userID | uppercase}} Details</h2>
+        <div>
+            <span>Day: </span>{{patientt.userId}}
+            <span>Time: </span>{{patientt.id}}
+            <span>Address: </span>{{patientt.title}}
+            <span>Status: </span>{{patientt.completed}}
+        </div>
+        <button (click)="goBack()">go back</button>
+</div>

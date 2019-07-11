@@ -1,0 +1,81 @@
+#tn{
+    background-color: rgb(255, 255, 255);
+}
+
+ul { padding:0; width:1200px; margin:20px auto}
+li { display:inline;}
+
+.bbt{
+    border: 1px solid black;
+}
+
+.outcome{
+    background-color: rgb(82, 133, 209);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+    
+}
+
+.outcome:hover{
+    color: darkgrey;
+    background-color: black;
+}
+
+.patient {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.patient td {
+  position: relative;
+  cursor: pointer;
+  /* background-color: #EEE; */
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  
+}
+
+.patient td:hover {
+  color: blue;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.patient a {
+  text-decoration: none;
+  position: relative;
+  /* display: block; */
+  width: 250px;
+  color :black;
+}
+
+.patient a:hover {
+  color:#607D8B;
+}
+
+.heroes .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color:#405061;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+#table1 {
+    border-spacing: 1000px;
+}
